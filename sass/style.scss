@@ -1,0 +1,118 @@
+@font-face{
+    font-family: PTSans;
+    src: url(../fonts/PT_Sans-Web-Regular.ttf);
+}
+
+@font-face{
+    font-family: PTSans_bold;
+    src: url(../fonts/PT_Sans-Web-Bold.ttf);
+}
+
+@font-face{
+    font-family: PTSans_caption;
+    src: url(../fonts/PT_Sans-Caption-Web-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PTSans;
+}
+
+.wrapper{
+    max-width: 1424px;
+    margin: 0 auto;
+}
+
+input, button{
+    outline: none;
+}
+
+.section_1{
+    background-image: url(../img/section1_bg.png);
+    background-size: cover;
+    height: calc(1682px/2);
+    background-position: bottom;
+    &__content{
+        max-width: 1092px;
+        margin: 0 auto;
+        &__header{
+            padding-top: 30px;
+            position: relative;
+            div{
+                position: absolute;
+                left: 0;
+                span{
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-family: PTSans_bold;
+                }
+                span:first-child{
+                    font-family: PTSans_caption;
+                    margin-right: 4px;
+                    text-transform: uppercase;
+                }
+            }
+            >span{
+                color: #ffffff;
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+                font-size: 12px;
+                font-family: PTSans_bold;
+                text-transform: uppercase;
+            }
+        }//header
+        &__title{
+            font-family: PTSans_caption;
+            font-size: 80px;
+            color: #ffffff;
+            max-width: 780px;
+            margin: 122px auto 0       ;
+            text-align: center;
+            line-height: 85px;
+        }//title
+        &__form{
+            &__wrapper{
+                max-width: 724px;
+                margin: 66px auto 0;
+                position: relative;
+            }
+            border-radius: 8px;
+            height: 80px;
+            padding: 15px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            position: relative;
+            z-index: 1;
+            &__input{
+                font-size: 24px;
+                line-height: 24px;
+                color: #333333;
+                padding-left: 12px;
+                width: 100%;
+            }
+            &__check{
+                min-width: 156px;
+                margin-left: 20px;
+                background-color: #5f6062;
+                color: #ffffff;
+                font-size: 22px;
+                border-radius: 8px;
+            }
+            &__result{
+                position: absolute;
+                background-color: #32383e;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                opacity: 0.8;
+            }
+        }//form
+    }//content
+}//section_1
