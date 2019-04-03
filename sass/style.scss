@@ -11,7 +11,7 @@
 
 @font-face{
     font-family: PTSans_caption;
-    src: url(../fonts/PT_Sans-Caption-Web-Bold.ttf);
+    src: url(../fonts/PTC75F.ttf);
 }
 
 //<------------------------- MIXIN ------------------------->
@@ -54,6 +54,30 @@ input, button{
     border: none;
 }
 
+.nav_dots{
+    width: 11px;
+    height: 70px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__dot{
+        display: block;
+        width: 11px;
+        height: 11px;
+        border: 1px solid #333333;
+        background-color: #ffffff;
+        border-radius: 50%;
+        cursor: pointer;
+        &.active-dot{
+            border: 1px solid #ffffff;
+            background-color: #333333;
+        }
+    }
+}
 //<------------------------- SECTION_1 ------------------------->
 
 .section_1{
@@ -89,6 +113,7 @@ input, button{
                 margin: 0 auto;
                 font-size: 12px;
                 font-family: PTSans_bold;
+                letter-spacing: 2px;
                 text-transform: uppercase;
             }
         }//header
@@ -188,9 +213,9 @@ input, button{
 
 //<------------------------- SECTION_2 ------------------------->
 .section_2{
-    height: calc(1682px/2);
+    padding: 30px 0 85px;
     background-color: #ffffff;
-    padding-top: 30px;
+    position: relative;
     &__content{
         max-width: 1092px;
         margin: 0 auto;
@@ -199,7 +224,7 @@ input, button{
                 span{
                     color: #333333;
                     font-size: 16px;
-                    font-family: PTSans_bold;
+                    font-family: PTSans;
                 }
                 span:first-child{
                     color: #b22725;
@@ -225,6 +250,7 @@ input, button{
                 width: 264px;
                 height: 200px;
                 text-align: center;
+                cursor: pointer;
                 img{
                     display: block;
                     margin: 37px auto 0;
@@ -237,5 +263,96 @@ input, button{
                 }
             }//item
         }//features
+        &__create_acc_btn{
+            @include green_btn();
+            margin-top: 20px;
+        }
     }//content
 }//section_2
+
+//<------------------------- SECTION_3 ------------------------->
+
+.section_3{
+    padding: 30px 0 53px 0;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    &__content{
+        max-width: 1092px;
+        margin: 0 auto;
+        position: relative;
+        &__header{
+            span{
+                color: #ffffff;
+                font-size: 16px;
+                font-family: PTSans;
+            }
+            span:first-child{
+                font-family: PTSans_caption;
+                margin-right: 4px;
+                text-transform: uppercase;
+            }
+        }//header
+        &__title{
+            margin-top: 54px;
+            font-size: 35px;
+            line-height: 35px;
+            font-family: PTSans_bold;
+            text-align: center;
+            color: #ffffff;
+        }//title
+        &__text-block{
+            font-size: 50px;
+            line-height: 60px;
+            font-family: PTSans_caption;
+            text-align: center;
+            color: #ffffff;
+            max-width: 920px;
+            margin: 96px auto 0;
+        }//text-block
+        &__create_acc_btn{
+            @include green_btn();
+            margin-top: 50px;
+        }
+        &__red_banner{
+            margin-top: 53px;
+            padding: 0 40px 0 35px;
+            min-height: 110px;
+            width: 100%;
+            background-color: #df4a5e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+            p{
+                color: #ffffff;
+                font-size: 22px;
+                line-height: 28px;
+            }
+            div{
+                width: 200px;
+                height: 70px;
+                padding-left: 33px;
+                border-left: 2px solid #e56e7e;
+                span{
+                    font-size: 50px;
+                    color: #ffffff;
+                    font-family: PTSans_caption;
+                    line-height: 70px;
+                }
+                img{
+                    width: 33px;
+                    margin-left: 8px;
+                }
+            }
+        }//red_banner
+        &__footer{
+            margin-top: 50px;
+            p{
+                color: rgba(255, 255, 255, 0.502);
+                font-size: 14px;
+            }
+        }//footer
+    }//content
+}//section_3
